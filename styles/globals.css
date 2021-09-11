@@ -1,0 +1,186 @@
+:root {
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont: "Raleway", sans-serif;
+  --textFont: "Roboto", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-family: var(--textFont);
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--headingFont);
+  font-weight: 900;
+  text-align: center;
+  color: var(--gris2);
+}
+h1 span {
+  font-weight: 400;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--gris2);
+}
+
+.app-header {
+  background-color: var(--gris2);
+}
+
+/* barra header */
+.title-header {
+  color: var(--blanco);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Botones */
+.btn {
+  padding: 1.5rem;
+  font-weight: 400;
+  font-family: var(--headingFont);
+  border-radius: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--gris2);
+  color: var(--blanco);
+  border: none;
+}
+
+:is(.btn-primary:hover, .btn-primary:focus) {
+  background: var(--gris3);
+  box-shadow: none;
+}
+
+/* COLOR */
+
+.blue-dark {
+  color: var(--gris2);
+}
+
+/* border radius */
+
+.br-radius-1 {
+  border-radius: 0.7rem;
+}
+
+/* Font size FZ */
+
+.fz-14 {
+  font-size: 14px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+.tm-icon-16 {
+  height: 16px !important;
+  color: var(--gris2);
+  width: auto !important;
+}
+
+.tm-icon-18 {
+  height: 18px !important;
+  color: var(--gris2);
+  width: auto !important;
+}
+
+/* SIDEBAR */
+aside {
+  padding: 3rem;
+  background-color: var(--blanco);
+}
+
+/* Cards */
+.listado {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+}
+
+.custom-card {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+  color: #333;
+  min-height: max-content;
+}
+
+.custom-card span {
+  color: #000;
+}
+
+/* MEDIAS */
+
+@media (min-width: 768px) {
+  aside {
+    background-color: var(--blanco);
+    flex: 0 0 550px;
+  }
+}
+
+@media (min-width: 960px) {
+  .contenedor-app {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  aside {
+    background-color: var(--blanco);
+    flex: 0 0 450px;
+  }
+}
+
+@media (min-width: 1140px) {
+  aside {
+    background-color: var(--blanco);
+    flex: 0 0 500px;
+  }
+}
+
+@media (min-width: 1400px) {
+  aside {
+    background-color: var(--blanco);
+    flex: 0 0 550px;
+  }
+
+  .max-form {
+    width: 100%;
+    max-width: 1440px;
+  }
+}
